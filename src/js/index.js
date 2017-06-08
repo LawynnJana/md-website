@@ -22,6 +22,11 @@ $(document).ready(function () {
         $(".left-boxes .box").animate({opacity: 1, left: '460px'}, 1700, 'swing');
         $(".right-boxes .box").animate({opacity:1, right: '460px'}, 1700, 'swing');
       }
+      else if ($(window).width() <= 480) {
+        $(".left-boxes .box").animate({opacity: 1}, 1700, 'swing');
+        $(".right-boxes .box").animate({opacity:1}, 1700, 'swing');
+      }
+
 
     });
 

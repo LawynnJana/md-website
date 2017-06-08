@@ -46,6 +46,9 @@ body{
     padding: 10px;
   }
 
+  #work-title{
+    text-align: center;
+  }
   #work .boxes li{
     list-style-type: none;
   }
@@ -64,7 +67,6 @@ body{
         margin-top: 15px;
         opacity: 0;
       }
-
       #work .boxes .box img{
         height: 100px;
         width: auto;
@@ -157,14 +159,29 @@ body{
 
     }
     #contact .container{
-
       width: 100%;
-
-
     }
 
+    #work .boxes .box {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 15px;
+      opacity: 0;
+    }
 
+    #work .boxes li.right-boxes{
+      margin-right: 40px;
+    }
 
+    #work .boxes li.right-boxes #jquery-box{
+      overflow: visible;
+      margin-top: -5px;
+    }
+    /*#work .boxes li.left-boxes{
+      float: left;
+    }*/
 
     #home .glyphicon.glyphicon-circle-arrow-down{
       font-size: 30px;
