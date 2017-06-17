@@ -13,21 +13,63 @@ $(document).ready(function () {
         }
     });
 
-    $('body').on('mouseenter', function(e){
-       $('#intro-text').slideDown("slow");
+    // $('body').on('mouseover', function(e){
+    //   if($(window).width() > 480){
+    //       $('#intro-text').slideDown("slow");
+    //   }
+    //   if($(window).width() <= 480){
+    //       $('#intro-text').slideDown("fast");
+    //   }
+    //
+    // });
+
+    if($(window).width() > 0){
+
+      //set timer to 5 seconds, after that, load the magic animation
+        setTimeout(function(){
+          	$('.p1').addClass('magictime-p tinDownIn-mod show');
+        }, 100);
+        setTimeout(function(){
+          	$('.p2').addClass('magictime-p tinDownIn-mod show');
+        }, 500);
+        setTimeout(function(){
+          	$('.p3').addClass('magictime-p spaceInDown show');
+        }, 1300);
+          // $('.intro').animate(function(){
+          //   $(this).addClass('slideLeft');
+          // });
+    }
+    if($(window).width() <= 480){
+        $('#intro-text').slideDown("fast");
+    }
+
+
+
+    $('.box').mouseenter(function(){
+      if ($(window).width() > 480){
+        $(this).find('img').fadeTo(200, 0);
+        $(this).find('.description').fadeIn(1000);
+      }
+    }).mouseleave(function(){
+      if ($(window).width() > 480){
+        $(this).find('.description').fadeOut(200, 0);
+        $(this).find('img').fadeTo(1000, 1);
+      }
+      if ($(window).width() <= 480){
+        $(this).find('.description').fadeOut(200, 0);
+        $(this).find('img').fadeTo(1000, 1);
+      }
+
     });
 
-    $("#work").mouseover(function(){
-      if ($(window).width() > 480) {
-        $(".left-boxes .box").animate({opacity: 1, left: '460px'}, 1700, 'swing');
-        $(".right-boxes .box").animate({opacity:1, right: '460px'}, 1700, 'swing');
+    $('.box').on('click', function(){
+      if($(window).width()<=480){
+        console.log("Gang");
+        $(this).find('img').fadeTo(200, 0);
+        $(this).find('.description').fadeIn(1000);
       }
-      else if ($(window).width() <= 480) {
-        $(".left-boxes .box").animate({opacity: 1}, 1700, 'swing');
-        $(".right-boxes .box").animate({opacity:1}, 1700, 'swing');
-      }
+    })
 
 
-    });
 
 })
