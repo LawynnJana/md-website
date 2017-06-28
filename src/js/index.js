@@ -13,28 +13,22 @@ $(document).ready(function () {
         }
     });
 
-    // $('body').on('mouseover', function(e){
-    //   if($(window).width() > 480){
-    //       $('#intro-text').slideDown("slow");
-    //   }
-    //   if($(window).width() <= 480){
-    //       $('#intro-text').slideDown("fast");
-    //   }
-    //
-    // });
-
     if($(window).width() > 0){
 
-      //set timer to 5 seconds, after that, load the magic animation
+        $('#about .jumbotron h1').animate({ opacity: 1 });
+
         setTimeout(function(){
-          	$('.p1').addClass('magictime-p tinDownIn-mod show');
+            $('.p1').addClass('magictime-slower tinRightInMain show');
         }, 100);
         setTimeout(function(){
-          	$('.p2').addClass('magictime-p tinDownIn-mod show');
-        }, 500);
+            $('.p2').addClass('magictime-slower tinLeftInMain show');
+        }, 600);
         setTimeout(function(){
-          	$('.p3').addClass('magictime-p spaceInDown show');
+            $('.p3').addClass('magictime-slower tinRightInMain show');
         }, 1300);
+        setTimeout(function(){
+            $('#about a span').removeClass('hide');
+        }, 3500);
           // $('.intro').animate(function(){
           //   $(this).addClass('slideLeft');
           // });

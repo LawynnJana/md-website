@@ -5,6 +5,10 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Oswald|Roboto");
 
+
+
+
+/*Global css*/
 body{
   font-family:  Helvetica, sans-serif;
   padding: 0;
@@ -12,46 +16,49 @@ body{
   background-color: #f4f4f4;
 }
 
+.hide {
+  display: none;
+}
+
 .page {
   height: 100vh;
   width: auto;
   font-family: Oswald, Helvetica;
 }
-  .page--home{
+
+  .page--about{
+    margin-top: -50px;
     background-color: white;
     text-align: center;
   }
-    .page--home .jumbotron{
+    .page--about .jumbotron{
       background: white;
     }
-    .page--home .intro{
+
+    #about .jumbotron h1{
+      opacity: 0;
+    }
+
+    .page--about .intro{
       font-family: Helvetica;
       max-width: 800px;
       margin: 0 auto;
       position: relative;
-      /*display:none;*/
       border-top: solid 2px;
       border-radius: 20px;
-      /*background-color: rgba(239,239,239, .6);*/
+
     }
-    .page--home .intro p{
+    .page--about .intro p{
       display: none;
       margin-top: 5px;
       background-color: rgba(239,239,239, .6);
       border-radius: 20px;
     }
-    .magictime-p{
-      -webkit-animation-duration: 2s;
-      -moz-animation-duration: 2s;
-      -o-animation-duration: 2s;
-      animation-duration: 2s;
+
+    #about a span {
+      margin-top: -60px;
     }
-    .show{
-      display: inline;
-    }
-    .temp{
-      /*position: relative;*/
-    }
+
   .page--work{
     background-color: #66B9BF;
     padding: 10px;
@@ -133,23 +140,23 @@ body{
   }
 
   @media(max-width: 480px){
-    #home,
-    #home .jumbotron h1
+    #about,
+    #about .jumbotron h1
     {
       margin-top: -10px;
     }
 
-    #home .fa.fa-cog.fa-spin.fa-2x.fa-fw{
+    #about .fa.fa-cog.fa-spin.fa-2x.fa-fw{
       margin-top: -8px;
     }
-    #home .my-2{
+    #about .my-2{
       margin-top: 2px;
     }
 
-    #home .intro{
+    #about .intro{
       margin-top: 10px;
     }
-    #home .intro p{
+    #about .intro p{
       font-size: 16px;
 
     }
@@ -230,23 +237,61 @@ body{
     }
   }
 
-
-  .tinDownIn-mod{
-    animation-name: tinDownIn-mod;
+  .show{
+    display: inline;
+    /*position: relative;*/
   }
-  @keyframes tinDownIn-mod {
+
+  .magictime-slow{
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s;
+  }
+
+  .magictime-slower{
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+
+  .tinLeftInMain {
+    animation-name: tinLeftInMain;
+  }
+  @keyframes tinLeftInMain {
     0% {
       opacity: 0;
-      transform: scale(1, 1) translateY(900%);
+      transform: scale(1, 1) translateX(-900%);
     }
 
-    /*50%, 70%, 90% {
+    90% {
       opacity: 1;
-      transform: scale(1.1, 1.1) translateY(0);
-    }*/
+      transform: scale(1.1, 1.1) translateX(0);
+    }
 
     /*60%, 80%, 100% {
       opacity: 1;
-      transform: scale(1, 1) translateY(0);
+      transform: scale(1, 1) translateX(0);
+    }*/
+  }
+
+  .tinRightInMain {
+    animation-name: tinRightInMain;
+  }
+  @keyframes tinRightInMain {
+    0% {
+      opacity: 0;
+      transform: scale(1, 1) translateX(900%);
+    }
+
+    90% {
+      opacity: 1;
+      transform: scale(1.1, 1.1) translateX(0);
+    }
+/*
+    60%, 80%, 100% {
+      opacity: 1;
+      transform: scale(1, 1) translateX(0);
     }*/
   }
