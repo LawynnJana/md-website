@@ -1,0 +1,22 @@
+/* YOUR CUSTOM STYLES */
+#about {
+  height: 100vh;
+  width: auto;
+}
+
+.my-navbar{
+   background-color: #9e9e9e !important;
+}
+
+.page-footer .social {
+  list-style-type: none !important;
+}
+
+.page-footer .social li {
+  display: inline;
+  padding: 0px 10px;
+}
+.center-block {
+  display: table;
+  margin: auto;
+}
