@@ -1,0 +1,18 @@
+/* YOUR CUSTOM STYLES */
+.center-block{
+  display: table;
+  margin: 0 auto;
+}
+
+.my-nav{
+  background-color: #78909c !important;
+}
+
+.social{
+  list-style-type: none;
+}
+
+.social li{
+  display: inline;
+  padding: 0px 10px;
+}
